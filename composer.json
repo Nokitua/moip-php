@@ -1,23 +1,14 @@
 {
-    "name": "Nokitua/moip-php",
-    "version": "1.2.2",
-    "type": "library",
-    "description": "Moip Labs",
-    "homepage": "http://github.com/Nokitua/moip-php",
+    "name": "nokitua/moip-php",
+    "description": "Integration of MoIP payment intermediary with Cakephp",
+    "type": "libraries",
     "license": "MIT",
     "authors": [
-        {
-            "name": "Bruno Ribeiro",
-            "email": "brunowribeiroo@facebook.com"
-        },
         {
             "name": "Murilo Azevedo",
             "email": "muriloazevedo@nokitua.com.br"
         }
-    ], 
-    "autoload": {
-        "psr-0": {
-            "Moip": "src/"
-        }
-    }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
 }
