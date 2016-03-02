@@ -3,12 +3,16 @@
     "version": "1.2",
     "type": "library",
     "description": "Moip Labs",
-    "homepage": "http://github.com/offboard/moip-php",
+    "homepage": "http://github.com/Nokitua/moip-php",
     "license": "MIT",
     "authors": [
         {
             "name": "Bruno Ribeiro",
             "email": "brunowribeiroo@facebook.com"
+        },
+        {
+            "name": "Murilo Azevedo",
+            "email": "muriloazevedo@nokitua.com.br"
         }
     ], 
     "autoload": {
