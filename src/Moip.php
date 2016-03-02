@@ -11,7 +11,9 @@
  * @version 1.6.2
  * @license <a href="http://www.opensource.org/licenses/bsd-license.php">BSD License</a>
  */
+namespace Moip;
 
+use phpQuery;
 /**
  * Moip's API abstraction class
  *
@@ -193,7 +195,7 @@ class Moip {
      * @access private
      */
     private function initXMLObject() {
-        $this->xml = new SimpleXmlElement('<?xml version="1.0" encoding="utf-8" ?><EnviarInstrucao></EnviarInstrucao>');
+        $this->xml = new \SimpleXmlElement('<?xml version="1.0" encoding="utf-8" ?><EnviarInstrucao></EnviarInstrucao>');
         $this->xml->addChild('InstrucaoUnica');
     }
 
@@ -346,7 +348,7 @@ class Moip {
     public function setReason($reason) {
         $this->reason = $reason;
         $this->xml->InstrucaoUnica->addChild('Razao', $this->reason);
-        
+
         return $this;
     }
 
@@ -371,7 +373,7 @@ class Moip {
 
         $formas = (!isset($instrucao->FormasPagamento)) ? $instrucao->addChild('FormasPagamento') : $instrucao->FormasPagamento;
 
-        if (!empty($this->payment_way)) 
+        if (!empty($this->payment_way))
             $formas->addChild('FormaPagamento', $this->payment_ways[$way]);
 
         return $this;
@@ -707,7 +709,7 @@ class Moip {
     public function getXML() {
 
         if ($this->payment_type == "Identification")
-            $this->xml->InstrucaoUnica->addAttribute('TipoValidacao', 'Transparente');        
+            $this->xml->InstrucaoUnica->addAttribute('TipoValidacao', 'Transparente');
 
         $return = $this->convert_encoding($this->xml->asXML(), true);
         return str_ireplace("\n", "", $return);
@@ -749,7 +751,7 @@ class Moip {
                 return $this->answer->xml;
             }
 
-            $xml = new SimpleXmlElement($this->answer->xml);
+            $xml = new \SimpleXmlElement($this->answer->xml);
 
             return new MoipResponse(array(
 				'response' => $xml->Resposta->Status == 'Sucesso' ? true : false,

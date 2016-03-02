@@ -1,20 +1,23 @@
 <?php
-
+ini_set('display_errors', 1);
+require 'vendor/autoload.php';
 /**
   include_once 'examples.php';
 
   exampleBasicInstructions();
   exampleFull();
   exampleQueryParcels();
- * 
+ *
  */
-include_once "autoload.inc.php";
+
+use Moip\Moip;
+
 
 $moip = new Moip();
 $moip->setEnvironment('test');
 $moip->setCredential(array(
-    'key' => 'ABABABABABABABABABABABABABABABABABABABAB',
-    'token' => '01010101010101010101010101010101'
+    'key' => '8UUKVUTBRLBGDGISZUY7UY7Y22SHZO3OIKBW6RMJ',
+    'token' => '6YA2TFYGRIWA5LPPTUJRJ88VPBNMKLF1'
 ));
 
 $moip->setUniqueID(false);
@@ -26,4 +29,4 @@ $moip->validate('Basic');
 $moip->send();
 print_r($moip->getAnswer());
 
-?>
+

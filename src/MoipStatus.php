@@ -7,6 +7,7 @@ require 'phpQuery/phpQuery.php';
  * @version 0.0.2
  * @package MoIP
  */
+namespace Moip;
 
 class MoIPStatus
 {

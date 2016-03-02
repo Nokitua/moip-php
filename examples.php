@@ -1,6 +1,8 @@
 <?php
+ini_set('display_errors', 1);
+require 'vendor/autoload.php';
 
-include_once "autoload.inc.php";
+use Moip\Moip;
 
 function exampleBasicInstructions() {
     $moip = new Moip();

@@ -9,6 +9,14 @@
             "email": "muriloazevedo@nokitua.com.br"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "Moip\\":"src/"
+        }
+    },
+
+    "minimum-stability": "dev",
+    "require": {
+        "coderockr/php-query": "dev-master"
+    }
 }
