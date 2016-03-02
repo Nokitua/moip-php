@@ -1,5 +1,6 @@
 {
     "name": "nokitua/moip-php",
+    "version": "1.2.3",
     "description": "Integration of MoIP payment intermediary with Cakephp",
     "type": "libraries",
     "license": "MIT",
